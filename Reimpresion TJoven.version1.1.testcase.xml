@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testcases>
+<testcase internalid="42" name="Reimpresión TJoven">
+	<node_order><![CDATA[104]]></node_order>
+	<externalid><![CDATA[5]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Este caso de test comprueba la validez de los campos al solicitar la reimpresi&oacute;n de una Tarjeta Joven.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Es necesario estar en:</p>
+<p>
+	<a href="https://venta.renfe.com/vol/impresionTarjeta.do">https://venta.renfe.com/vol/impresionTarjeta.do</a></p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Email con formato correcto,</p>
+<p>
+	DNI con formato correcto</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Correcto. B&uacute;squeda del usuario en el sistema.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Email con formato correcto,</p>
+<p>
+	DNI con formato incorrecto (s&iacute;mbolos).</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Incorrecto, no debe buscar en el sistema.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Email con formato correcto,</p>
+<p>
+	DNI en blanco.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Incorrecto, no debe buscar en el sistema.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Email con formato incorrecto,</p>
+<p>
+	DNI con formato incorrecto (s&iacute;mbolos).</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Incorrecto, no debe buscar en el sistema.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testcases>
